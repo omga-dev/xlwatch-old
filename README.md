@@ -34,37 +34,83 @@ The code might be pretty messy since I was given around 1 or 2 days to make this
 ## Output .lua file will read
 
 ```
-export type Consts_Type = {
-	Value: number,
-	Value2: string
+export type Sheet1_Type = {
+	numberValue: number,
+	intValue: number,
+	stringValue: string
 }
 
-export type Sheet1_Type = {
-
+export type Sheet2_Type = {
+	TableValue: {
+		en: string,
+		ko: string
+	}
 }
 
 export type Table_Type = {
-	Consts: {[string]: Consts_Type},
-	Sheet1: {[None]: Sheet1_Type},
+	Sheet1: {[number]: Sheet1_Type},
+	Sheet2: {[string]: Sheet2_Type},
 }
 
 local Table : Table_Type = {
-	Consts = {
-		foo = {
-			Value = 123,
-			Value2 = "aa"
+	Sheet1 = {
+		[1] = {
+			numberValue = 123.45,
+			intValue = 111,
+			stringValue = "a"
 		},
-		bar = {
-			Value = 456,
-			Value2 = "bb"
+		[2] = {
+			numberValue = 678.9,
+			intValue = 22,
+			stringValue = "b"
 		},
-		baz = {
-			Value = 789,
-			Value2 = "cc"
+		[3] = {
+			numberValue = 789,
+			intValue = 333,
+			stringValue = "c"
+		},
+		[4] = {
+			numberValue = 2300.0,
+			intValue = 2300,
+			stringValue = "d"
+		},
+		[5] = {
+			numberValue = 4500.0,
+			intValue = 4500,
+			stringValue = "e"
 		}
 	},
-	Sheet1 = {
-
+	Sheet2 = {
+		text1 = {
+			TableValue = {
+				en = "aa",
+				ko = "가"
+			}
+		},
+		text2 = {
+			TableValue = {
+				en = "bb",
+				ko = "나"
+			}
+		},
+		text3 = {
+			TableValue = {
+				en = "cc",
+				ko = "다"
+			}
+		},
+		text4 = {
+			TableValue = {
+				en = "dd",
+				ko = "라"
+			}
+		},
+		text5 = {
+			TableValue = {
+				en = "ee",
+				ko = "마"
+			}
+		}
 	}
 }
 
