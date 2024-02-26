@@ -1,1 +1,1 @@
-python xlwatch/__main__.py
+python -m xlwatch output.lua
