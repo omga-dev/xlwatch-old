@@ -1,1 +1,1 @@
-python -m xlwatch output.lua
+python -m xlwatch data/DataTable.lua
